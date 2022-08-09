@@ -3,6 +3,7 @@
 #include <string>
 #include "FastNoiseLite.h"
 #include <sstream>
+#include <cstring>
 
 
 int chartoint(char s[])
