@@ -68,7 +68,11 @@ extern "C"
         not_str << (void*)res;
         std::string adr = not_str.str();
         buf += adr;
+        #ifdef _WIN32
         strcpy_s(res, buf.length() + 1, buf.c_str());
+        #else
+        strcpy(res, buf.c_str());
+        #endif
         return res;
     }
 
